@@ -64,20 +64,17 @@ ul {
 }
 
 .contact-icon {
-  fill: var(--secondary-text-color);
+  fill: currentColor;
   margin-right: 10px;
 }
 
-.contact-icon-text {
+.contact-icon-text .link {
   display: flex;
   align-items: center;
 }
-.contact .contact-icon-text:hover,
-.contact .contact-icon-text:focus {
+.contact-icon-text .link:hover,
+.contact-icon-text .link:focus {
   color: var(--active-color);
-  .contact-icon {
-    fill: var(--active-color);
-  }
   cursor: pointer;
 }
 
@@ -90,8 +87,11 @@ ul {
     ),
     url("../images/order-background.jpg");
   background-repeat: no-repeat;
-  background-position: 50% 35%;
-  background-size: 1600px;
+  background-position: center;
+  background-size: cover;
+  max-width: 1600px;
+  height: 600px;
+  margin: 0 auto;
 }
 
 .slogan-text {
@@ -402,28 +402,26 @@ footer {
 
 .work-icon-rect {
   background-color: var(--button-background-color);
-  padding-top: 25px;
-  padding-bottom: 25px;
   margin-bottom: 30px;
   border-radius: 4px;
-}
-
-.work-icon-content {
-  display: block;
-  margin: auto;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .team-icon-box {
   width: 44px;
-  padding-top: 12px;
-  padding-bottom: 12px;
+  height: 44px;
   border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--icons-light-color);
 }
 
 .team-icon-content {
-  fill: var(--icons-light-color);
-  display: block;
-  margin: auto;
+  fill: currentColor;
 }
 
 .team-icons {
@@ -436,10 +434,7 @@ footer {
 .team-icon-box:hover,
 .team-icon-box:focus {
   background-color: var(--active-color);
-  .team-icon-content {
-    fill: var(--light-text-color);
-  }
-  cursor: pointer;
+  color: var(--light-text-color);
 }
 
 .clients-title {
@@ -453,18 +448,19 @@ footer {
 
 .client-icon-box {
   width: 170px;
-  padding-top: 16px;
-  padding-bottom: 16px;
+  height: 92px;
   border-color: var(--icons-light-color);
   border-width: 1px;
   border-radius: 4px;
   border-style: solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--icons-light-color);
 }
 
 .client-icon-content {
-  fill: var(--icons-light-color);
-  display: block;
-  margin: auto;
+  fill: currentColor;
 }
 
 .clients-icons {
@@ -477,10 +473,7 @@ footer {
 .client-icon-box:hover,
 .client-icon-box:focus {
   border-color: var(--active-color);
-  .client-icon-content {
-    fill: var(--active-color);
-  }
-  cursor: pointer;
+  color: var(--active-color);
 }
 
 .join-us-text {
@@ -495,16 +488,17 @@ footer {
 
 .join-us-icon-box {
   width: 44px;
-  padding-top: 12px;
-  padding-bottom: 12px;
+  height: 44px;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--light-text-color);
 }
 
 .join-us-icon-content {
-  fill: var(--light-text-color);
-  display: block;
-  margin: auto;
+  fill: currentColor;
 }
 
 .join-us-icons {
@@ -516,21 +510,23 @@ footer {
 .join-us-icon-box:hover,
 .join-us-icon-box:focus {
   background-color: var(--active-color);
-  cursor: pointer;
 }
 
 .footer-content-box {
   display: flex;
-  gap: 70px;
+  align-items: baseline;
 }
 
 .join-us-box {
-  padding-top: 12px;
+  margin-left: 70px;
 }
 
-.portfolio-box > li:hover,
-.portfolio-box > li:focus {
+.portfolio-box .link {
+  display: block;
+}
+
+.portfolio-box .link:hover,
+.portfolio-box .link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
-  cursor: pointer;
 }
